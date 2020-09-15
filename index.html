@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>4 x 4 Game</title>
-	<link rel="stylesheet" href="game.css">
-	<script src="game.js"></script>
-</head>
-<body>
-	<h1>4x4 Game</h1>
-	<div id="game-board"></div>
-	<div id="game-score"></div>
-	<div id="game-end"></div>
-</body>
+   <head>
+      <title>4 x 4 Game</title>
+      <link rel="stylesheet" href="game.css">
+      <script src="game.js"></script>
+   </head>
+   <body>
+      <h1>4x4 Game</h1>
+      <div style="width: 100%; overflow: hidden;">
+         <div id="game-board"></div>
+         <div class="game-rules">
+            <h3>Game Rules</h3>
+            <p>The game can be played using arrow keys. The game reflects the following rules:</p>
+            <ul>
+               <li>The playing field consists of 4 x 4 fields</li>
+               <li>Each field is initialized randomly with the value EMPTY, 1 or 2</li>
+               <li>The player can move the playing field with the cursor keys Left, Right, Up, Down.</li>
+               <li>
+                  Hereby each field moves one field in the corresponding direction. It applies:
+                  <ul>
+                     <li>A field cannot be moved beyond the edge of the playing field.</li>
+                     <li>A field cannot move into its direction, if the field in the corresponding direction <br> is already occupied and does not have the same value.</li>
+                     <li>A field can be moved to another field if both values of the fields are identical.</li>
+                     <li>If this happens, one field is removed and the value of the other field is doubled.</li>
+                  </ul>
+               </li>
+               <li>After each move, a 1 or 2 is randomly added at the opposite edge of the move direction, on an empty field.</li>
+               <li>The game is over when there are no more valid moves</li>
+            </ul>
+         </div>
+      </div>
+      <div id="game-score"></div>
+      <div id="game-end"></div>
+   </body>
 </html>
