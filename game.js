@@ -187,8 +187,8 @@ function checkGameEnd() {
 function drawTable(refresh = null, isGameEnd = false) {
     // get the reference for the body
     var gameBoard = document.getElementById('game-board');
-    var gameScore = document.getElementById('score');
-    var gameEnd = document.getElementById('end-game');
+    var gameScore = document.getElementById('game-score');
+    var gameEnd = document.getElementById('game-end');
 
     // creates a <table> element
     var tbl = document.createElement("table");
